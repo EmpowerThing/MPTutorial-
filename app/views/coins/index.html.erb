@@ -15,4 +15,17 @@
   <tbody>
     <% @coins.each do |coin| %>
       <tr>
-        <td><%= c
+        <td><%= coin.description %></td>
+        <td><%= coin.acronym %></td>
+        <td><%= coin.url_image %></td>
+        <td><%= link_to 'Show', coin %></td>
+        <td><%= link_to 'Edit', edit_coin_path(coin) %></td>
+        <td><%= link_to 'Destroy', coin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coin', new_coin_path %>
