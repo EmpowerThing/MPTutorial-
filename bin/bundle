@@ -31,4 +31,29 @@ m = Module.new do
         bundler_version = a
       end
       next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
-    
+      bundler_version = $1
+      update_index = i
+    end
+    bundler_version
+  end
+
+  def gemfile
+    gemfile = ENV["BUNDLE_GEMFILE"]
+    return gemfile if gemfile && !gemfile.empty?
+
+    File.expand_path("../../Gemfile", __FILE__)
+  end
+
+  def lockfile
+    lockfile =
+      case File.basename(gemfile)
+      when "gems.rb" then gemfile.sub(/\.rb$/, gemfile)
+      else "#{gemfile}.lock"
+      end
+    File.expand_path(lockfile)
+  end
+
+  def lockfile_version
+    return unless File.file?(lockfile)
+    lockfile_contents = File.read(lockfile)
+   
