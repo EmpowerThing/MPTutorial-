@@ -75,4 +75,24 @@ m = Module.new do
 
     return requirement unless Gem::Version.new(Gem::VERSION) < Gem::Version.new("2.7.0")
 
-    requirement 
+    requirement += ".a" if bundler_gem_version.prerelease?
+
+    requirement
+  end
+
+  def load_bundler!
+    ENV["BUNDLE_GEMFILE"] ||= gemfile
+
+    activate_bundler
+  end
+
+  def activate_bundler
+    gem_error = activation_error_handling do
+      gem "bundler", bundler_requirement
+    end
+    return if gem_error.nil?
+    require_error = activation_error_handling do
+      require "bundler/version"
+    end
+    return if require_error.nil? && Gem::Requirement.new(bundler_requirement).satisfied_by?(Gem::Version.new(Bundler::VERSION))
+    warn "Activati
