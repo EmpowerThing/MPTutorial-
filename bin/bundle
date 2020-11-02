@@ -56,4 +56,23 @@ m = Module.new do
   def lockfile_version
     return unless File.file?(lockfile)
     lockfile_contents = File.read(lockfile)
-   
+    return unless lockfile_contents =~ /\n\nBUNDLED WITH\n\s{2,}(#{Gem::Version::VERSION_PATTERN})\n/
+    Regexp.last_match(1)
+  end
+
+  def bundler_version
+    @bundler_version ||=
+      env_var_version || cli_arg_version ||
+        lockfile_version
+  end
+
+  def bundler_requirement
+    return "#{Gem::Requirement.default}.a" unless bundler_version
+
+    bundler_gem_version = Gem::Version.new(bundler_version)
+
+    requirement = bundler_gem_version.approximate_recommendation
+
+    return requirement unless Gem::Version.new(Gem::VERSION) < Gem::Version.new("2.7.0")
+
+    requirement 
