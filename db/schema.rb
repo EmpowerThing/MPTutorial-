@@ -16,4 +16,8 @@ ActiveRecord::Schema.define(version: 2021_07_14_180600) do
     t.string "description"
     t.string "acronym"
     t.string "url_image"
-    t.datetime "created_at", precisio
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+end
