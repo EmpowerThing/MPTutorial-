@@ -30,4 +30,19 @@ class CoinsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get edit" do
     get edit_coin_url(@coin)
-   
+    assert_response :success
+  end
+
+  test "should update coin" do
+    patch coin_url(@coin), params: { coin: { acronym: @coin.acronym, description: @coin.description, url_image: @coin.url_image } }
+    assert_redirected_to coin_url(@coin)
+  end
+
+  test "should destroy coin" do
+    assert_difference('Coin.count', -1) do
+      delete coin_url(@coin)
+    end
+
+    assert_redirected_to coins_url
+  end
+end
