@@ -56,4 +56,14 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.14.5.tgz#b939b43f8c37765443a19ae74ad8b15978e0a191"
   integrity sha512-YTA/Twn0vBXDVGJuAX6PwW7x5zQei1luDDo2Pl6q1qZ7hVNl0RZrhHCQG/ArGpR29Vl7ETiB8eJyrvpuRp300w==
   dependencies:
-    "@babel/helper-explode-assig
+    "@babel/helper-explode-assignable-expression" "^7.14.5"
+    "@babel/types" "^7.14.5"
+
+"@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.14.5":
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-compilation-targets/-/helper-compilation-targets-7.14.5.tgz#7a99c5d0967911e972fe2c3411f7d5b498498ecf"
+  integrity sha512-v+QtZqXEiOnpO6EYvlImB6zCD2Lel06RzOPzmkz/D/XgQiUu3C/Jb1LOqSt/AIA34TYi/Q+KlT8vTQrgdxkbLw==
+  dependencies:
+    "@babel/compat-data" "^7.14.5"
+    "@babel/helper-validator-option" "^7.14.5"
+    br
