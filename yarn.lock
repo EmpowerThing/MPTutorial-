@@ -188,4 +188,17 @@
   integrity sha512-3i1Qe9/8x/hCHINujn+iuHy+mMRLoc77b2nI9TB0zjH1hvn9qGlXjWlggdwUcju36PkPCy/lpM7LLUdcTyH4Ow==
   dependencies:
     "@babel/helper-member-expression-to-functions" "^7.14.5"
-    "@babel/he
+    "@babel/helper-optimise-call-expression" "^7.14.5"
+    "@babel/traverse" "^7.14.5"
+    "@babel/types" "^7.14.5"
+
+"@babel/helper-simple-access@^7.14.5":
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-simple-access/-/helper-simple-access-7.14.5.tgz#66ea85cf53ba0b4e588ba77fc813f53abcaa41c4"
+  integrity sha512-nfBN9xvmCt6nrMZjfhkl7i0oTV3yxR4/FztsbOASyTvVcoYd0TRHh7eMLdlEcCqobydC0LAF3LtC92Iwxo0wyw==
+  dependencies:
+    "@babel/types" "^7.14.5"
+
+"@babel/helper-skip-transparent-expression-wrappers@^7.14.5":
+  version "7.14.5"
+  resolved "https://registr
