@@ -263,4 +263,15 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
-    "@bab
+    "@babel/plugin-proposal-optional-chaining" "^7.14.5"
+
+"@babel/plugin-proposal-async-generator-functions@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.14.7.tgz#784a48c3d8ed073f65adcf30b57bcbf6c8119ace"
+  integrity sha512-RK8Wj7lXLY3bqei69/cc25gwS5puEc3dknoFPFbqfy3XxYQBQFvu4ioWpafMBAB+L9NyptQK4nMOa5Xz16og8Q==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.14.5"
+    "@babel/helper-remap-async-to-generator" "^7.14.5"
+    "@babel/plugin-syntax-async-generators" "^7.8.4"
+
+"@babel/p
