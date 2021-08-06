@@ -1350,4 +1350,15 @@ assert@^1.1.1:
 
 assign-symbols@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/assign-symbols/-/a
+  resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
+  integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
+
+async-each@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.3.tgz#b727dbf87d7651602f06f4d4ac387f47d91b0cbf"
+  integrity sha512-z/WhQ5FPySLdvREByI2vZiTWwCnF0moMJ1hK9YQwDTHKh6I7/uSckMetoRGb5UBZPC1z0jlw+n/XCgjeH7y1AQ==
+
+async-foreach@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/async-foreach/-/async-foreach-0.1.3.tgz#36121f845c0578172de419a97dbeb1d16ec34542"
+  integrity sha1-NhIfhFwFeBct
